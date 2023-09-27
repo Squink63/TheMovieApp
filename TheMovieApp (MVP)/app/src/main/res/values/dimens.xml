@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    Generic with ratio-->
+    <dimen name="margin_xsmall">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_card_medium">6dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_medium_10">10dp</dimen>
+    <dimen name="margin_medium_12">12dp</dimen>
+    <dimen name="margin_medium_x_13">13dp</dimen>
+    <dimen name="margin_medium_2">16dp</dimen>
+    <dimen name="margin_medium_2_18">18dp</dimen>
+    <dimen name="margin_card_medium_2">12dp</dimen>
+    <dimen name="margin_medium_3">20dp</dimen>
+    <dimen name="margin_medium_3_22">22dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_large_28">28dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xxlarge">48dp</dimen>
+    <dimen name="margin_xxxlarge">64dp</dimen>
+    <dimen name="margin_xxxxlarge">80dp</dimen>
+
+    <dimen name="margin_small_n">-4dp</dimen>
+    <dimen name="margin_card_medium_n">-6dp</dimen>
+    <dimen name="margin_medium_n">-8dp</dimen>
+    <dimen name="margin_card_medium_2_n">-12dp</dimen>
+    <dimen name="margin_medium_2_n">-16dp</dimen>
+    <dimen name="margin_medium_3_n">-18dp</dimen>
+    <dimen name="margin_large_n">-24dp</dimen>
+    <dimen name="margin_xlarge_n">-32dp</dimen>
+    <dimen name="margin_xxlarge_40_n">-40dp</dimen>
+    <dimen name="margin_xxlarge_n">-48dp</dimen>
+    <dimen name="margin_xxxlarge_n">-64dp</dimen>
+
+    <dimen name="text_smallest">8sp</dimen>
+    <dimen name="text_smaller_9">9sp</dimen>
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_regular_2x">16sp</dimen>
+    <dimen name="text_regular_2x_18">18sp</dimen>
+    <dimen name="text_regular_3x">20sp</dimen>
+    <dimen name="text_regular_3x_22">22sp</dimen>
+    <dimen name="text_heading_1x">24sp</dimen>
+    <dimen name="text_heading_2x">32sp</dimen>
+    <dimen name="text_big">40sp</dimen>
+    <dimen name="text_big_2x">60sp</dimen>
+    <dimen name="text_big_3x">80sp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+
+
+<!--    App Specific Dimensions-->
+
+
+    <dimen name="dimen_large_100">100dp</dimen>
+    <dimen name="dimen_large_200">200dp</dimen>
+    <dimen name="dimen_large_250">250dp</dimen>
+    <dimen name="dimen_large_400">400dp</dimen>
+    <dimen name="width_movie_item">128dp</dimen>
+    <dimen name="height_movie_image">180dp</dimen>
+    <dimen name="height_check_movie_showtime">180dp</dimen>
+    <dimen name="width_show_Case">260dp</dimen>
+    <dimen name="height_show_case">180dp</dimen>
+    <dimen name="width_actor">146dp</dimen>
+    <dimen name="height_actor">195dp</dimen>
+    <dimen name="height_collapsing_toolbar_movie_detail">300dp</dimen>
+    <dimen name="width_release_year">62dp</dimen>
+
+
+</resources>

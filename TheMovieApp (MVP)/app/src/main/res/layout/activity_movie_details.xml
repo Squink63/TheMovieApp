@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MovieDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ctbMovieDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_collapsing_toolbar_movie_detail"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:title="Indiana Jones and the Dial of Destiny"
+            app:collapsedTitleTextColor="@color/white"
+            app:expandedTitleTextColor="@android:color/transparent">
+
+            <FrameLayout
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:background="@drawable/background_back_button"
+                android:elevation="@dimen/margin_medium">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_chevron_left_white_24dp"
+                    />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                app:srcCompat="@drawable/ic_search"
+                android:elevation="@dimen/margin_small"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMovieDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/placeholder_movie3"
+                app:layout_collapseMode="parallax"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_actor"
+                app:layout_collapseMode="parallax"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMovieName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_3"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    tools:text="Indiana Jones and the Dial of Destiny"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_heading_1x"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMovieDate"
+                    android:layout_width="@dimen/width_release_year"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:background="@drawable/background_release_year"
+                    tools:text="2023"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_alignStart="@+id/tvMovieName"
+                    android:layout_above="@+id/tvMovieName"
+                    android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="9,75"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_big"
+                    android:layout_alignParentEnd="true"
+                    android:layout_above="@id/tvMovieName"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium" />
+
+                <RatingBar
+                    android:id="@+id/rbMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:layout_toStartOf="@id/tvRating"
+                    android:layout_alignTop="@id/tvRating"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNumberOfVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="388876 VOTES"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:layout_toStartOf="@id/tvRating"
+                    android:layout_alignTop="@id/rbMovie"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:paddingTop="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_baseline_access_time_white_24dp"
+                app:tint="@color/colorAccent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:layout_toEndOf="@id/ivTime"
+                android:paddingTop="@dimen/margin_medium"
+                tools:text="2h 13min"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFirstGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toEndOf="@id/tvTime"
+                android:background="@drawable/background_genre_chip"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_xsmall"
+                tools:text="Action"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSecondGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toEndOf="@id/tvFirstGenre"
+                android:background="@drawable/background_genre_chip"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_xsmall"
+                tools:text="Adventure"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvThirdGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toEndOf="@id/tvSecondGenre"
+                android:background="@drawable/background_genre_chip"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_xsmall"
+                tools:text="Fantasy"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ivTime"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:srcCompat="@drawable/ic_baseline_favorite_border_white_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoryLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivTime"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:text="@string/lbl_story_line"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoryOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvStoryLine"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                tools:text="Professor Henry Walton “Indiana” Jones, Jr.,at the ripe old age of 70 considering his series canonical birthdate of 1899. Considering the life he’s led, it’s both the years and the mileage at this point, with the director, James Mangold (Logan), confirming they lean into the age thing and not just in a jokey way. However old Indy is, though, he’ll be back and facing down a new crop of Nazis who are helping the US government with its rocketry program, but whom Indy discovers aren’t as “ex-Nazi” as their Operation Paperclip statuses would otherwise say."
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/btnPlayTrailer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:layout_below="@+id/tvStoryOverview"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_card_medium_2"
+                android:background="@drawable/background_play_trailer"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlay"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_baseline_play_circle_filled_white_24dp"
+                    app:tint="@color/colorTransparentOverlayPlayButton" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPlayTrailer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_toEndOf="@+id/ivPlay"
+                    android:text="PLAY TRAILER"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnRateMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:layout_alignTop="@+id/btnPlayTrailer"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_toEndOf="@+id/btnPlayTrailer"
+                android:background="@drawable/background_rate_movie"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_baseline_star_white_24dp"
+                    app:tint="@color/colorAccent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRateMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_toEndOf="@id/ivStar"
+                    android:text="@string/lbl_rate_movie"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/vpActors"
+                layout="@layout/view_pod_actor_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnPlayTrailer"
+                android:layout_marginTop="@dimen/margin_large" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAboutFilmLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_about_film"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold"
+                android:layout_below="@+id/vpActors"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"/>
+
+            <LinearLayout
+                android:id="@+id/llOriginalTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAboutFilmLabel"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOriginalTitleLAbel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/lbl_original_title"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOriginalTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    tools:text="Indiana Jones and the Dial of Destiny"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llOriginalTitle"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTypeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/lbl_type"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    tools:text="Action, Adventure, Fantasy"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llProduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llType"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProductionLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/lbl_production"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProduction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    tools:text="United Kingdom, USA"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPremiere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llProduction"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPremiereLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/lbl_premiere"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPremiere"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    tools:text="30 June 2023(World)"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llPremiere"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescriptionLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/lbl_description"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    tools:text="Professor Henry Walton “Indiana” Jones, Jr.,at the ripe old age of 70 considering his series canonical birthdate of 1899. Considering the life he’s led, it’s both the years and the mileage at this point, with the director, James Mangold (Logan), confirming they lean into the age thing and not just in a jokey way. However old Indy is, though, he’ll be back and facing down a new crop of Nazis who are helping the US government with its rocketry program, but whom Indy discovers aren’t as “ex-Nazi” as their Operation Paperclip statuses would otherwise say."
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/vpCreators"
+                layout="@layout/view_pod_actor_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llDescription"
+                android:layout_marginBottom="@dimen/margin_xxlarge"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TheMovieApp</string>
+    <string name="lbl_discover">Discover</string>
+    <string name="lbl_search">Search</string>
+    <string name="lbl_movie1">All Quiet on the Western Front\nOfficial Review</string>
+    <string name="lbl_best_popular_films_and_series">BEST POPULAR FILMS AND SERIES</string>
+    <string name="lbl_check_movie_showtimes">Check Movie\nShowtimes</string>
+    <string name="lbl_see_more"><u>See More</u></string>
+    <string name="lbl_more_showcases"><u>MORE SHOWCASES</u></string>
+    <string name="lbl_show_cases">SHOW CASES</string>
+    <string name="lbl_movie_date">15 DECEMBER 2016</string>
+    <string name="lbl_more_actors"><u>MORE ACTORS</u></string>
+    <string name="lbl_best_actors">BEST ACTORS</string>
+    <string name="lbl_story_line">STORY LINE</string>
+    <string name="lbl_rate_movie">RATE MOVIE</string>
+    <string name="lbl_actors">ACTORS</string>
+    <string name="lbl_creators">CREATORS</string>
+    <string name="lbl_more_creators"><u>MORE CREATORS</u></string>
+    <string name="lbl_original_title">Original Title: </string>
+    <string name="lbl_type">Type:</string>
+    <string name="lbl_production">Production:</string>
+    <string name="lbl_premiere">Premiere:</string>
+    <string name="lbl_description">Description:</string>
+    <string name="lbl_about_film">ABOUT FILM</string>
+    <string name="lbl_enter_movie_name">Please enter movie name</string>
+</resources>
